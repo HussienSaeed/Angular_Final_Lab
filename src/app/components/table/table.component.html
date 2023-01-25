@@ -1,0 +1,78 @@
+<!-- <form class="container">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Name</label>
+      <input type="text" class="form-control"  [(ngModel)]="nameValue"  >
+    </div> -->
+    <!-- <div class="mb-3">
+      <label  class="form-label">Age</label>
+      <input type="number" class="form-control"  [(ngModel)]="inputValue2" >
+    </div> -->
+    <!-- <button type="submit" (click)="add()" class="btn btn-primary">Add student</button>
+  </form>
+
+
+<div class="p-3 bg-light">
+<div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let student of todosName;let i = index">
+            <td scope="row">{{i+1}}</td>
+            <td>{{</td>
+            <td>dk</td>
+             <td>{{student.age}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+</div> -->
+<div class="container mt-5">
+    <div class="bg-primary text-light text-center p-1 rounded mb-3">
+      <h1>Users table</h1>
+    </div>
+    <div class="row justify-content-center gy-3">
+  
+  
+      <div class="col-12 ">
+        <input [(ngModel)]="nameValue" class="form-control" (input)="validateName()" placeholder="Enter your name" type="text">
+        <p *ngIf="flag" class="text-danger">Enter your name in 4:15</p>
+  
+      </div>
+      <div class="col-12 ">
+        <input [(ngModel)]="ageValue" class="form-control" (input)="validateAge()" placeholder="Enter your age" type="text">
+        <p *ngIf="flag2" class="text-danger">Enter your Age 18+:80</p>
+  
+      </div>
+  
+  
+      <div class="col-3">
+        <button class="btn btn-success text-dark" (click)="addStudent()">Add user</button>
+        <p></p>
+      </div>
+  
+  
+    </div>
+  </div>
+  
+  <table class=" table table-hover w-75 m-auto text-center">
+    <thead>
+      <th>id</th>
+      <th>name</th>
+      <th>age</th>
+    <tbody>
+  
+        <tr *ngFor="let todoName of todosName;let i = index" >
+          <td>{{i+1}}</td>
+          <td>{{todoName}}</td>
+          <td>{{todosAge[i]}}</td>
+        </tr>
+  
+      </tbody>
+  </table>
+  

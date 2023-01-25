@@ -1,0 +1,17 @@
+<div class="card ">
+    <img [src]="productItem.imgSrc" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title fw-bold text-dark">{{productItem.title}}</h5>
+      <p class="card-text text-dark fw-semibold">{{productItem.price}} $</p>
+      <div [ngSwitch]="productItem.quantity">
+        
+        <p *ngSwitchCase="0" class="card-text text-danger fw-semibold">Not available</p>
+        <p *ngSwitchCase="1" class="card-text text-danger fw-semibold">Only one available</p>
+        <p *ngSwitchDefault class="card-text text-success fw-semibold">{{productItem.quantity}} Items</p>
+        <p class="card-text text-dark fw-semibold">{{productItem.desc}}</p>
+      </div>
+      <a href="#" class="btn " [ngClass]="{
+        'bg-danger':productItem.quantity ==0,'bg-primary':productItem.quantity !=0
+      }">{{productItem.quantity ==0?"Sold out":"Buy"}}</a>
+    </div>
+  </div>

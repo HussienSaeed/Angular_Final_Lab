@@ -1,0 +1,134 @@
+nav{
+    background-color: #131921;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 55555555;
+}
+
+nav .nav-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .logo{
+    width: 30%;
+    font-size: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+nav ul{
+    width: 50%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.nav-hov:hover{
+    color: #3f5c64;
+    border-bottom: 2px solid  white;
+    transition: all .5s;
+}
+
+.cart{
+    width: 50px;
+    background: white;
+    padding: 3px;
+    border-radius: 5px;
+    font-size: 17px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+}
+
+nav button{
+    width: 27px;
+    height: 27px;
+    background-color: #2c3333;
+    border: none;
+background-image: url(/src/assets/images/btn-img.png);
+    background-position: center center;
+    background-size: 72% 78%;
+    background-repeat: no-repeat;
+    border: 1px solid white;
+    border-radius: 5px;
+    display: none;
+}
+
+nav .responsive{
+    display: none;
+}
+
+.drop-down a{
+    text-decoration: none;
+    color: #302f2f;
+}
+
+.drop-down div{
+    padding: 10px 0;
+    border-bottom:  .5px solid #302f2f4a ;
+}
+
+.drop-down .last{
+    border-bottom:  none;
+}
+
+.drop-nav{
+    display: none;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    left: 0;
+    background-color: rgb(237, 230, 230);
+    z-index: 555555;
+}
+
+.d-block{
+    display: block;
+}
+@media screen and (max-width:768px) {
+    body{
+        padding-top: 45px;
+    }
+    nav{
+        
+        height: 45px;
+      
+    }
+    nav ul{
+       display: none;
+    }
+    nav button{
+       
+        display: block;
+    
+    }
+    nav .logo{
+        width: 65%;
+        font-size: 1.4rem;
+    }
+    nav .responsive{
+        display: block;
+        width: 48px;
+        font-size: 1rem;
+        padding: 4px 0 4px 4px;
+        height: fit-content;
+        justify-content: space-between;
+    }
+}
+

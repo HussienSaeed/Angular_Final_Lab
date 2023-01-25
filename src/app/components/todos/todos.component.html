@@ -1,0 +1,23 @@
+<div class="todo p-3 bg-primary rounded m-5 mb-5">
+    <div class="container" >
+        <h2 class="text-light text-center p-2 mt-5 mb-5">Todo App</h2>
+        <div class="row">
+            <div class="col-sm-6 col-md-9 mt-2">
+                <input type="text" class="form-control" placeholder="Enter what you wanna do" [(ngModel)]="inputValue" aria-label="ToDo" aria-describedby="button-addon2">
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-2 mt-2">
+            <button class="btn btn-success w-100 d-block" type="button" (click)="addTodo()">Add</button>
+        </div>
+        <div class="output" *ngFor="let todo of todos;let i=index">
+            <div class="row">
+                <div class="col-sm-6 col-md-9 " >
+                    <p class="bg-light mt-2 rounded text-dark p-2">{{todo}}</p> 
+                </div>
+                <div class="col-sm-6 col-md-2 mt-2">
+                    <button class="btn btn-danger w-100 d-block"  (click)="removeTodo(i)" type="button">Remove</button>
+                </div>
+            </div>
+        </div>
+      </div>
+</div>

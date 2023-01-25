@@ -1,0 +1,40 @@
+<div class="p-3 bg-primary mb-3">
+  <h2 class="text-center fw-bold text-light">Our Tracks</h2>
+  <div class="container">
+    <select class="form-select" [(ngModel)]="recTrack">
+      <option *ngFor="let track of trackNames">{{ track }}</option>
+    </select>
+    <div [ngSwitch]="recTrack">
+      <div *ngSwitchCase="'Front-End'">
+        <h1 class="text-dark fw-semibold">Available Branches For Front-End Track</h1>
+        <ul>
+          <li>Menofia</li>
+          <li>Smart</li>
+          <li>Cairo</li>
+        </ul>
+      </div>
+      <div *ngSwitchCase="'Back-End'">
+        <h1 class="text-dark fw-semibold">Available Branches For Back-End Track</h1>
+        <ul>
+          <li>Menofia</li>
+          <li>Smart</li>
+        </ul>
+      </div>
+      <div *ngSwitchCase="'Open Source'">
+        <h1 class="text-dark fw-semibold">Available Branches For Open Source Track</h1>
+        <ul>
+          <li>Menofia</li>
+          <li>Cairo</li>
+        </ul>
+      </div>
+      <div *ngSwitchCase="'AI'" >
+        <h1 class="text-dark fw-semibold">Available Branches For AI Track</h1>
+        <ul>
+          <li>Menofia</li>
+          <li>Smart</li>
+          <li>New Capital</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

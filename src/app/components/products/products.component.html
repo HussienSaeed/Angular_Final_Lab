@@ -1,0 +1,9 @@
+<div class="container p-5">
+    <div class="row gy-5 ">
+        <h2 class="text-center fw-bold ">Our Products</h2>
+        <div class="row g-3">
+            <app-product-item *ngFor="let product of products" [productItem]="product" class="col-sm-6 col-md-3"></app-product-item>
+
+        </div>
+    </div>
+</div>
